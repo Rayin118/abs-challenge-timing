@@ -1,0 +1,23 @@
+# 大型資料：由 notebooks/reproduce_slides.ipynb 或 run_all.sh 重新產生
+data/raw/
+data/processed/
+data/xfer/
+*.parquet
+*.pkl
+*.json.gz
+
+# 執行紀錄、暫存
+logs/
+_to_delete/
+notebooks/_src*.py
+
+# Python／Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.env
+
+# 系統檔
+.DS_Store
+Thumbs.db

@@ -1,0 +1,20 @@
+# 只用來設定程式碼風格工具（ruff、black），本專案不是可安裝的套件
+[tool.black]
+line-length = 120
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+# E741：數學符號式的短變數名（例如 l）沿用論文寫法。B023：迴圈內 lambda 只在當輪使用
+ignore = ["E741", "B023"]
+
+[tool.ruff.lint.per-file-ignores]
+# 圖的標題與註解是完整的中文句子，不拆行
+"scripts/08_figures.py" = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["src"]

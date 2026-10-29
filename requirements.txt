@@ -1,0 +1,26 @@
+# ABS 挑戰研究的 Python 套件（鎖定版本）
+#
+# 這組版本是 2026-10-28 程式碼整理時「重構前後逐檔比對」所用的環境（Python 3.10.20），
+# 在這組版本下，原版與整理後的程式產生的 data/processed 與 outputs/tables 完全相同。
+# 其中 pandas 2.3.3、pyarrow 25.0.1 與 Mac 上原始 parquet 檔記錄的版本一致。
+#
+# 安裝：pip install -r requirements.txt
+# 注意：不同平台的數值函式庫（例如 Mac 與 Linux 的 BLAS）在矩陣乘法上
+# 會有 1e-16 等級的差異，經過 05 的最佳化後可能放大到第 3–4 位小數，詳見 README「已知限制」。
+
+pandas==2.3.3
+numpy==2.2.6
+scipy==1.15.3
+pyarrow==25.0.1
+matplotlib==3.10.9
+rdrobust==2.1.1
+rddensity==3.0
+requests==2.34.2
+urllib3==2.8.0
+
+# 開 notebooks/reproduce_slides.ipynb 需要（不影響結果，版本不限）
+# jupyter
+
+# 開發工具（只用於檢查與格式化，不影響結果）
+# ruff==0.14.0
+# black==25.9.0
